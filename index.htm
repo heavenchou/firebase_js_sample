@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React and Firebase</title>
+    <!-- 以下引入 react.js, react-dom.js（react 0.14 後將 react-dom 從 react 核心分離，更符合 react 跨平台抽象化的定位）以及 babel-core browser 版 -->
+    <script src="./react.min.js"></script>
+    <script src="./react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- 這邊的 id="example" 的 <div> 為 React Component 要插入的地方 -->
+    <div id="app"></div>
+    <!-- 以下就是包在 babel（透過進行語言翻譯）中的 React JSX 語法，babel 會將其轉為瀏覽器看
+    的懂得 JavaScript 
+    -->
+   <script type="text/babel" src="index.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD14t57pPkwUkfeB_0rBYKLq6xyKZpA_X8",
+        authDomain: "testproject-cfa47.firebaseapp.com",
+        databaseURL: "https://testproject-cfa47.firebaseio.com",
+        projectId: "testproject-cfa47",
+        storageBucket: "testproject-cfa47.appspot.com",
+        messagingSenderId: "311112511954"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </body>
+</html>
